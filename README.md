@@ -15,15 +15,19 @@ window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));
 The above JavaScript code was executed in the browser's console and the resulting .csv file was used to download the respective images.
 Using the fast.ai library, the images were downloaded for both corn tortillas and flour tortillas.
 
-<batch data here>
+![Image of Data Batch](data_batch.png)
 
 ## Training The Model
 
 Transfer learning will be used and in this case, Resnet34 was used as a pretrained model along with its weights. Learning rate was iterated over to determine the best slices to use while trying to fit.
+<learning rate>
+![Image of LR](learning_rates.png)
 
 <confusion matrix>
-<top losses>
+![Image of CM](confusion_matrix.png)
 
 ## Cleaning Up
 
 An important thing to note is that there are images that should not be in our data, either because they are misclassified or because they are irrevalent to our model. As such, it important to validate and clean our data to reduce potential errors.
+
+![Image of Error](error_prediction.png)
